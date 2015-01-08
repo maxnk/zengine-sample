@@ -1,0 +1,19 @@
+/**
+ * Plugin Test-895765 CSS
+ */
+
+.title { 
+    color: purple;
+}
+
+.todo .completed {
+    text-decoration: line-through;
+}
+
+.new-todo-container {
+    margin-top: 30px;
+}
+
+.icon-cancel {
+    cursor: pointer;
+}

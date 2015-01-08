@@ -1,0 +1,32 @@
+<script type="text/ng-template" id="test895765-main">
+    <h1>TODOs</h1>
+	<div ng-style="{visibility: loading && 'visible' || 'hidden'}">
+		<span class="throbber"></span>
+	</div>
+	<div class="row">
+    	<div class="row todo" ng-repeat="todo in todos">
+    		<div class="col-md-1">
+    		    <input type="checkbox" ng-model="todo.completed" ng-click="updateTodo(todo)" />
+    		</div>
+    		<div class="col-md-10" ng-class="{completed: todo.completed}">
+    		    {{todo.text}}
+    		</div>
+    		<div class="col-md-1">
+    		    <i class="icon icon-cancel" ng-click="removeTodo(todo)"></i>
+    		</div>
+    		<hr ng-if="!$last">
+    	</div>
+    	
+		<div class="row new-todo-container">
+    		<div class="col-md-8 col-md-offset-2">
+    		    <h2>New todo</h2>
+    		    
+    			<form ng-submit="addTodo()">
+    			    <div class="form-group">
+    				    <input type="text" ng-model="todoForm.text" placeholder="Type a text and press enter" class="form-control" required />
+    				</div>
+    			</form>
+    	    </div>
+		</div>
+	</div>
+</script>
